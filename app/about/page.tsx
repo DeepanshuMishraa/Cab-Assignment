@@ -20,7 +20,7 @@ export default function About() {
                   Reliable and Affordable Cab Service
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  At iCab, we're dedicated to providing our customers with the best possible cab service. Our
+                  At iCab, we&apos;re dedicated to providing our customers with the best possible cab service. Our
                   mission is to make transportation easy, convenient, and accessible to everyone.
                 </p>
               </div>
@@ -78,7 +78,7 @@ export default function About() {
               <div className="grid gap-1">
                 <h3 className="text-lg font-bold text-yellow-500">Competitive Pricing</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  We offer competitive and transparent pricing, so you can trust that you're getting the best value for
+                  We offer competitive and transparent pricing, so you can trust that you&apos;re getting the best value for
                   your money.
                 </p>
               </div>
@@ -158,7 +158,7 @@ export default function About() {
                     </div>
                   </div>
                   <p>
-                    "I've been using iCab for over a year now and I'm consistently impressed by their reliable
+                    "I&apos;ve been using iCab for over a year now and I&apos;m consistently impressed by their reliable
                     service and friendly drivers. The app is easy to use and the pricing is very competitive."
                   </p>
                 </CardContent>
@@ -185,7 +185,7 @@ export default function About() {
                     </div>
                   </div>
                   <p>
-                    "I've used several cab services in the past, but iCab has been the most reliable and
+                    "I&apos;ve used several cab services in the past, but iCab has been the most reliable and
                     affordable. The drivers are always courteous and the cars are well-maintained. I highly recommend
                     them."
                   </p>
@@ -213,7 +213,7 @@ export default function About() {
                     </div>
                   </div>
                   <p>
-                    "I've been using iCab for the past few months and I'm really impressed with their service. The
+                    "I&apos;ve been using iCab for the past few months and I&apos;m really impressed with their service. The
                     drivers are always on time and the app makes booking a ride a breeze. I definitely recommend them to
                     anyone looking for a reliable cab service."
                   </p>
