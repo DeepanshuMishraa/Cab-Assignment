@@ -1,7 +1,7 @@
 "use client"
 
 import { Poppins, Ubuntu } from 'next/font/google';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, LegacyRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import icab from './icab.jpg'
@@ -46,7 +46,7 @@ const Landing = () => {
   return (
     <>
       <motion.div
-        ref={ref1}
+        ref={ref1 as LegacyRef<HTMLDivElement>}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: hasAnimated1 ? 1 : 0, y: hasAnimated1 ? 0 : 50 }}
         transition={{ duration: 1 }}
@@ -104,7 +104,7 @@ const Landing = () => {
         </div>
       </div>
       <motion.div
-        ref={ref2}
+        ref={ref2 as LegacyRef<HTMLDivElement>}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: hasAnimated2 ? 1 : 0, y: hasAnimated2 ? 0 : 50 }}
         transition={{ duration: 1 }}
