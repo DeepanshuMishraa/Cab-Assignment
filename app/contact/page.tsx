@@ -14,7 +14,7 @@ export default function Component() {
       <div className="space-y-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold">Get in Touch</h1>
         <p className="text-muted-foreground text-lg md:text-xl">
-          Have a question or need help booking a ride? Fill out the form below and we'll get back to you as soon as
+          Have a question or need help booking a ride? Fill out the form below and we&apos;ll get back to you as soon as
           possible.
         </p>
       </div>

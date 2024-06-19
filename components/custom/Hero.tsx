@@ -29,7 +29,7 @@ const Hero = () => {
     <div className="w-full p-8">
       <div className="flex justify-between">
         <div>
-          <h1 className={`${mons.className} font-bold text-5xl`}>We'll take you</h1>
+          <h1 className={`${mons.className} font-bold text-5xl`}>We&apos;ll take you</h1>
           <h1 className={`${mons.className} flex mt-2 items-center font-bold text-4xl`}>
             Place <IoLocationOutline className="ml-1" />
           </h1>

@@ -82,7 +82,7 @@ const Landing = () => {
       <div className='mt-32 p-4'>
         <div className=''>
           <h1 className={`text-center text-4xl font-bold ${ubuntu.className}`} style={{ textShadow: '2px 2px 4px rgba(0, 128, 0, 0.6)' }}>
-            There's an iCab ride for everyone
+            There&apos;s an iCab ride for everyone
           </h1>
         </div>
         <div className="flex gap-4 justify-evenly mt-8 items-center">
