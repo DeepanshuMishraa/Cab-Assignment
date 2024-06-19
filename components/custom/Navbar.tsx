@@ -1,4 +1,4 @@
-import { AlignLeft, CarFront, EarthIcon, Headphones, LocateFixedIcon, LocateIcon, Navigation2Icon, NavigationIcon, NavigationOffIcon, Package, Settings, Share2Icon, SlidersHorizontal, User, Wallet } from "lucide-react";
+import { AlignLeft, CarFront, EarthIcon, Headphones, Package, Settings, Share2Icon, SlidersHorizontal, User, Wallet } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
@@ -9,8 +9,6 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Josefin_Sans, Libre_Franklin, Rubik } from "next/font/google";
 import { IoLocationSharp } from "react-icons/io5";
 
-
-const Libre = Libre_Franklin({subsets:["latin"]});
 const Josefin = Josefin_Sans({subsets:["latin"]});
 const rubik = Rubik({subsets:["latin"]});
 

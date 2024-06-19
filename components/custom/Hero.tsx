@@ -3,13 +3,16 @@ import { Montserrat } from "next/font/google";
 import { IoLocationOutline, IoNavigateCircle } from "react-icons/io5";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
-import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import Link from "next/link";
-import { AddressAutofill } from "@mapbox/search-js-react";
+import dynamic from "next/dynamic";
 
 const mons = Montserrat({ subsets: ["latin"] });
+
+const AddressAutofill = dynamic(() => import('@mapbox/search-js-react').then((mod) => mod.AddressAutofill), {
+  ssr: false,
+});
 
 const Hero = () => {
   const [pickup, setPickup] = useState("");

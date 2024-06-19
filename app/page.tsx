@@ -3,13 +3,16 @@ import Hero from "@/components/custom/Hero";
 import Landing from "@/components/custom/Landing";
 import Navbar from "@/components/custom/Navbar";
 
-export default function Home() {
+const page = () => {
   return (
-    <>
-    <Navbar/>
+    <div>
+      <Navbar/>
       <Hero/>
       <Landing/>
       <Footer/>
-    </>
-  );
+    </div>
+  )
 }
+
+export default page
+
