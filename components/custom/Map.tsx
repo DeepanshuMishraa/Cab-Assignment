@@ -1,12 +1,14 @@
-"use client";
-
-import React, { useState, useEffect, useRef } from 'react';
+"use client"
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import mapboxgl, { LngLatLike } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import axios from 'axios';
 import { SelectDemo } from '../Select';
 import { Button } from '../ui/button';
 import { useSearchParams } from 'next/navigation';
+
+// Fallback component to render while data is being fetched
+const Fallback = () => <div>Loading...</div>;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGVzdHVzcnIiLCJhIjoiY2x3ejhiaHcxMDRtZzJpc2VtaXFpc3lpeCJ9.8TIx8H5Jdc8-QOtaR9fH_Q';
 
@@ -15,7 +17,7 @@ export interface RideOption {
   price: number;
   estimatedTime: string;
   isFaster?: boolean;
-  Img : string;
+  Img: string;
 }
 
 interface MapProps {
@@ -28,6 +30,7 @@ const Map: React.FC<MapProps> = ({ rideOptions }) => {
   const [startLocation, setStartLocation] = useState<[number, number] | null>(null);
   const [endLocation, setEndLocation] = useState<[number, number] | null>(null);
 
+  // Wrap useSearchParams in Suspense
   const searchParams = useSearchParams();
   const pickup = searchParams.get('pickup');
   const drop = searchParams.get('drop');
@@ -108,7 +111,10 @@ const Map: React.FC<MapProps> = ({ rideOptions }) => {
       <div className="w-1/2 h-full p-4 overflow-y-auto">
         <div className="choose-ride bg-gray-100 p-4 rounded-md mb-4">
           <h2 className="text-2xl font-bold">Choose a ride</h2>
-          <p>{pickup} → {drop}</p>
+          {/* Wrap pickup and drop in Suspense */}
+          <Suspense fallback={<Fallback />}>
+            <p>{pickup} → {drop}</p>
+          </Suspense>
           <p>Leave Now</p>
         </div>
         <div className="recommended">
