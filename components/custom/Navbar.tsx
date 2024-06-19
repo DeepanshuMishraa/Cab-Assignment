@@ -6,12 +6,13 @@ import { FaFileInvoice, FaMoneyBill } from "react-icons/fa";
 import { DropdownMenuDemo } from "../ui/Dropdownt";
 import { LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { Josefin_Sans, Libre_Franklin } from "next/font/google";
+import { Josefin_Sans, Libre_Franklin, Rubik } from "next/font/google";
 import { IoLocationSharp } from "react-icons/io5";
 
 
 const Libre = Libre_Franklin({subsets:["latin"]});
 const Josefin = Josefin_Sans({subsets:["latin"]});
+const rubik = Rubik({subsets:["latin"]});
 
 
 const Navbar = () => {
@@ -81,15 +82,15 @@ const MobDash = ()=>{
   )
 }
 
-const DeskDash = ()=>{
+export const DeskDash = ()=>{
   return(
     <div className="max-lg:hidden w-full border-b shadow-sm border-gray-200">
-      <div className="flex justify-between p-4">
+      <div className="flex justify-between p-1">
         <div className="flex items-center gap-6">
-          <Link href="/" className="font-manrope text-4xl font-bold">iCab</Link>
+          <Link href="/" className={`${rubik.className} text-xl p-2`}>iCab</Link>
           <Link
             href="/ride"
-            className="p-4 dark:text-white font-manrope group  transition-all duration-300 ease-in-out text-xl  font-bold"
+            className={`${rubik.className} p-4 dark:text-white group  transition-all duration-300 ease-in-out text-xl  font-semibold`}
           >
             <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] flex transition-all duration-500 ease-out">
               <CarFront className="mr-2 items-center"/>Ride
@@ -129,7 +130,7 @@ const DesktopNavbar = async () => {
           </Link>
           <div className="items-center flex gap-4 text-sm">
           <Link
-            href="/ride"
+            href="/about"
             className="p-4 text-black  font-semibold group transition-all duration-300 ease-in-out"
           >
             <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
