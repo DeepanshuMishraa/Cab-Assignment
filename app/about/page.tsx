@@ -158,8 +158,8 @@ export default function About() {
                     </div>
                   </div>
                   <p>
-                    "I&apos;ve been using iCab for over a year now and I&apos;m consistently impressed by their reliable
-                    service and friendly drivers. The app is easy to use and the pricing is very competitive."
+                  &quot;I&apos;ve been using iCab for over a year now and I&apos;m consistently impressed by their reliable
+                    service and friendly drivers. The app is easy to use and the pricing is very competitive.&quot;
                   </p>
                 </CardContent>
               </Card>
@@ -185,9 +185,9 @@ export default function About() {
                     </div>
                   </div>
                   <p>
-                    "I&apos;ve used several cab services in the past, but iCab has been the most reliable and
+                  &quot;I&apos;ve used several cab services in the past, but iCab has been the most reliable and
                     affordable. The drivers are always courteous and the cars are well-maintained. I highly recommend
-                    them."
+                    them.&quot;
                   </p>
                 </CardContent>
               </Card>
@@ -213,9 +213,9 @@ export default function About() {
                     </div>
                   </div>
                   <p>
-                    "I&apos;ve been using iCab for the past few months and I&apos;m really impressed with their service. The
+                  &quot;I&apos;ve been using iCab for the past few months and I&apos;m really impressed with their service. The
                     drivers are always on time and the app makes booking a ride a breeze. I definitely recommend them to
-                    anyone looking for a reliable cab service."
+                    anyone looking for a reliable cab service.&quot;
                   </p>
                 </CardContent>
               </Card>
