@@ -8,6 +8,7 @@ import { LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextj
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Josefin_Sans, Libre_Franklin, Rubik } from "next/font/google";
 import { IoLocationSharp } from "react-icons/io5";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Josefin = Josefin_Sans({subsets:["latin"]});
 const rubik = Rubik({subsets:["latin"]});
@@ -119,61 +120,50 @@ const DesktopNavbar = async () => {
     const authStatus = await isAuthenticated();
     return (
       <div className="max-lg:hidden w-full h-20 flex justify-between items-center">
-        <div className="flex items-center">
-          <Link href="/" className="p-4 text-2xl font-bold">
-            <div className="flex items-center">
-              <IoLocationSharp className=" mb-2 mr-1" />
-              <h1 className={`${Josefin.className} text-lg font-bold`}>iCab</h1>
-            </div>
-          </Link>
-          <div className="items-center flex gap-4 text-sm">
-          <Link
-            href="/about"
-            className="p-4 text-black  font-semibold group transition-all duration-300 ease-in-out"
-          >
+      <div className="flex items-center">
+        <Link href="/" className="p-4 text-2xl font-bold">
+          <div className="flex items-center">
+            <IoLocationSharp className=" mb-2 mr-1" />
+            <h1 className="text-lg font-bold">iCab</h1>
+          </div>
+        </Link>
+        <div className="items-center flex gap-4 text-sm">
+          <Link href="/about" className="p-4 text-black font-semibold group transition-all duration-300 ease-in-out">
             <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               About us
             </span>
           </Link>
-            <Link
-              href="/about-us"
-              className=" font-semibold font-manrope group transition-all duration-300 ease-in-out"
-            >
-              <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                Download our App
-              </span>
-            </Link>
-            <Link
-              href="/services"
-              className="p-4 font-semibold font-manrope group transition-all duration-300 ease-in-out"
-            >
-              <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                Services
-              </span>
-            </Link>
-            <Link
-              href="/contact"
-              className=" font-semibold font-manrope group transition-all duration-300 ease-in-out"
-            >
-              <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                Contact
-              </span>
-            </Link>
-          </div>
-        </div>
-        <div className="flex items-center p-4">
-          {authStatus ? (
-            <LogoutLink>Logout</LogoutLink>
-          ) : (
-            <div className="flex items-center gap-4 text-sm">
-              <div className="flex gap-4 items-center">
-                <LoginLink className="font-bold">Sign in</LoginLink>
-                <Button><Link href="/ride">Get started</Link></Button>
-              </div>
-            </div>
-          )}
+          <Link href="/about-us" className="font-semibold font-manrope group transition-all duration-300 ease-in-out">
+            <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              Download our App
+            </span>
+          </Link>
+          <Link href="/services" className="p-4 font-semibold font-manrope group transition-all duration-300 ease-in-out">
+            <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              Services
+            </span>
+          </Link>
+          <Link href="/contact" className="font-semibold font-manrope group transition-all duration-300 ease-in-out">
+            <span className="bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              Contact
+            </span>
+          </Link>
         </div>
       </div>
+      <div className="flex items-center p-4">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <div className="flex items-center gap-4 text-sm">
+            <div className="flex gap-4 items-center">
+              <button><Link href="/sign-in">Sign in</Link></button>
+              <button><Link href="/sign-up">Get started</Link></button>
+            </div>
+          </div>
+        </SignedOut>
+      </div>
+    </div>
     );
   };
 

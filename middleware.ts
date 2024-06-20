@@ -1,8 +1,14 @@
-import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
-import { NextRequest } from "next/server";
-export default function middleware(req:NextRequest) {
-  return withAuth(req);
-}
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+
+
+
+const isProtectedRoute = createRouteMatcher(["/ride(.*)"]);
+
+export default clerkMiddleware((auth, req) => {
+  if (isProtectedRoute(req)) auth().protect();
+});
+
 export const config = {
-  matcher: ["/ride"],
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+
 };

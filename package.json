@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.1.6",
     "@hookform/resolvers": "^3.6.0",
     "@kinde-oss/kinde-auth-nextjs": "^2.3.1",
     "@mapbox/mapbox-gl-geocoder": "^5.0.2",

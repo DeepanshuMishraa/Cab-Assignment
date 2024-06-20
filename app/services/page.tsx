@@ -54,23 +54,11 @@ export default function Services() {
         </div>
       </section>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-[#333] dark:bg-[#FFC107]">
-        <div className="container px-4 md:px-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col items-center justify-center space-y-4 p-6 rounded-lg bg-[#FFC107] dark:bg-[#333] shadow-lg">
+        <div className="container  px-4 md:px-6 flex items-center justify-center hover:scale-105 duration-200">
+          <div className="flex flex-col items-center justify-center  p-4 rounded-lg bg-[#FFC107] dark:bg-[#333] shadow-lg">
             <CarIcon className="w-12 h-12 text-[#333] dark:text-[#FFC107]" />
             <h3 className="text-xl font-semibold text-[#333] dark:text-[#FFC107]">Cab Services</h3>
             <p className="text-[#555] dark:text-[#aaa] text-center">Hail a cab with a tap, 24/7 availability.</p>
-          </div>
-          <div className="flex flex-col items-center justify-center space-y-4 p-6 rounded-lg bg-[#FFC107] dark:bg-[#333] shadow-lg">
-            <TruckIcon className="w-12 h-12 text-[#333] dark:text-[#FFC107]" />
-            <h3 className="text-xl font-semibold text-[#333] dark:text-[#FFC107]">Delivery Services</h3>
-            <p className="text-[#555] dark:text-[#aaa] text-center">Fast and reliable delivery for your business.</p>
-          </div>
-          <div className="flex flex-col items-center justify-center space-y-4 p-6 rounded-lg bg-[#FFC107] dark:bg-[#333] shadow-lg">
-            <BikeIcon className="w-12 h-12 text-[#333] dark:text-[#FFC107]" />
-            <h3 className="text-xl font-semibold text-[#333] dark:text-[#FFC107]">Bike Rentals</h3>
-            <p className="text-[#555] dark:text-[#aaa] text-center">
-              Explore the city on two wheels, at your own pace.
-            </p>
           </div>
         </div>
       </section>
