@@ -108,8 +108,8 @@ const Map: React.FC<MapProps> = ({ rideOptions }) => {
   }, [pickup, drop]);
 
   return (
-    <div className="flex h-full w-full">
-      <div className="w-1/2 h-full p-4 overflow-y-auto">
+    <div className="flex max-lg:flex-col-reverse h-full w-full">
+      <div className="w-1/2 max-lg:w-full h-full p-4 overflow-y-auto">
         <div className="choose-ride bg-gray-100 p-4 rounded-md mb-4">
           <h2 className="text-2xl font-bold">Choose a ride</h2>
           <Suspense fallback={<Fallback />}>
@@ -138,8 +138,8 @@ const Map: React.FC<MapProps> = ({ rideOptions }) => {
             </div>
           ))}
         </div>
-        <div className='fixed bottom-0 m-4 rounded-xl bg-gray-100 shadow-lg shadow-gray-400 w-[26rem]'>
-          <div className='p-8 h-18 flex gap-8'>
+        <div className='fixed  bottom-0 m-4 rounded-xl bg-gray-100 shadow-lg shadow-gray-400 w-[26rem] max-lg:w-[20rem]'>
+          <div className='p-8 h-18 flex max-lg:flex-col gap-8 max-lg:gap-4'>
             <div>
               <SelectDemo />
             </div>
@@ -147,7 +147,7 @@ const Map: React.FC<MapProps> = ({ rideOptions }) => {
           </div>
         </div>
       </div>
-      <div ref={mapContainerRef} className="w-1/2 h-full" />
+      <div ref={mapContainerRef} className="w-1/2 max-lg:w-full h-full" />
     </div>
   );
 };

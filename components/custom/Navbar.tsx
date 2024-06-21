@@ -39,7 +39,10 @@ const MobDash = ()=>{
         <div>
           <Link href="/" className="font-bold text-3xl font-raleway">iCab</Link>
         </div>
-        <div className="flex items-center">
+        <div className="flex gap-4 items-center">
+          <SignedIn>
+            <UserButton/>
+          </SignedIn>
         <Sheet>
       <SheetTrigger asChild>
         <SlidersHorizontal className="dark:text-white text-black" />
@@ -168,23 +171,28 @@ const DesktopNavbar = async () => {
   };
 
 const MobileNavbar = async() => {
-    const {isAuthenticated} =  getKindeServerSession();
-    const authStatus  = await isAuthenticated();
+
   return (
     <div className="hidden max-lg:block  w-full  h-16 ">
       <div className="flex justify-between">
         <Link href="/" className="text-black font-manrope font-bold p-4 items-center flex text-xl">
+        <IoLocationSharp className=" mb-2 mr-1" />
           iCab
         </Link>
         <div className="flex items-center font-poppins gap-4 px-2">
-{authStatus ? (
-    <LogoutLink>Logout</LogoutLink>
-):(
-    <div className="flex gap-2">
-        <LoginLink>Login</LoginLink>
-        <RegisterLink>Register</RegisterLink>
-    </div>
-)}
+        <div className="flex items-center p-4">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <div className="flex items-center gap-4 text-sm">
+            <div className="flex gap-4 items-center">
+              <button><Link href="/sign-in">Sign in</Link></button>
+              <button><Link href="/sign-up">Get started</Link></button>
+            </div>
+          </div>
+        </SignedOut>
+      </div>
           <SheetDemo />
         </div>
       </div>

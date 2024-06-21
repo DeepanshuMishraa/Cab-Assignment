@@ -57,7 +57,7 @@ const Landing = () => {
             Global mobility ecosystem driving<br /> communities forward
           </h1>
         </div>
-        <div className="flex gap-4 justify-evenly mt-8 items-center">
+        <div className="flex max-lg:flex-col gap-4 justify-evenly mt-8 items-center">
           <div className="text-center flex items-center flex-col mt-6">
             <img src="https://i.etsystatic.com/16458179/r/il/1e4326/3760731466/il_570xN.3760731466_1i20.jpg" className='rounded-lg' width={200} height={200} alt="Cities covered" />
             <h2 className="text-2xl font-bold mt-2">250+</h2>
@@ -85,7 +85,7 @@ const Landing = () => {
             There&apos;s an iCab ride for everyone
           </h1>
         </div>
-        <div className="flex gap-4 justify-evenly mt-8 items-center">
+        <div className="flex max-lg:flex-col gap-4 justify-evenly mt-8 items-center">
           <div className="flex items-start flex-col mt-6">
             <img src="https://s3-ap-southeast-1.amazonaws.com/ola-prod-website/ride-budget.svg" className='rounded-sm' alt="Cities covered" />
             <h2 className="text-xl text-left font-semibold mt-2">For any budget</h2>
@@ -96,7 +96,7 @@ const Landing = () => {
             <h2 className="text-xl text-left font-semibold mt-2">For any distance</h2>
             <p className="font-medium text-md mt-2 text-gray-500 text-left">Book rides within the city with<br /> <span className='text-black'>Daily</span>, or take a trip to your<br /> favourite destinations outside<br /> the city with <span className='text-black'>Outstation.</span></p>
           </div>
-          <div className="flex items-start flex-col mt-6">
+          <div className="flex  items-start flex-col mt-6">
             <img src="https://s3-ap-southeast-1.amazonaws.com/ola-prod-website/ride-duration.svg" className='rounded-sm' alt="Kilometers on S1" />
             <h2 className="text-xl text-left font-semibold mt-2">For any duration</h2>
             <p className="font-medium text-md mt-2 text-gray-500 text-left">Easily plan a day out without<br /> having to worry about<br /> conveyance with an hour- <br />based package from <span className='text-black'>Rental.</span></p>
@@ -110,10 +110,10 @@ const Landing = () => {
         transition={{ duration: 1 }}
         className="mt-4 p-4"
       >
-        <div className='flex items-start p-8 mt-20'>
+        <div className='flex  items-start p-8 mt-20'>
           <h1 className={`font-bold text-4xl ${poppins.className}`}>Download our apps to<br /> get the best experience</h1>
         </div>
-        <div className='flex gap-12 p-8'>
+        <div className='flex max-lg:flex-col gap-12 p-8'>
           <div className='bg-lime-100 rounded-sm flex flex-col w-60 h-64'>
             <div className='p-6'>
               <Image src={icab} alt="icab" width={50} height={50} className='rounded-lg' />

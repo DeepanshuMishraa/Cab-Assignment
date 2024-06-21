@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <div className="w-full p-8">
-      <div className="flex justify-between">
+      <div className="flex max-lg:flex-col justify-between">
         <div>
           <h1 className={`${mons.className} font-bold text-5xl`}>We&apos;ll take you</h1>
           <h1 className={`${mons.className} flex mt-2 items-center font-bold text-4xl`}>
@@ -46,7 +46,7 @@ const Hero = () => {
             <p className={`${mons.className} whitespace-normal leading-relaxed text-justify text-gray-400`}>
               We have Car Rentals, an Online cab booking, providing customers with reliable Local taxi booking services
             </p>
-            <form className="flex items-center">
+            <form className="flex lg:items-center max-lg:flex-col">
               <div className="p-2">
                 <Label>From</Label>
                 <AddressAutofill 
@@ -58,11 +58,11 @@ const Hero = () => {
                     onChange={(e) => setPickup(e.target.value)}
                     placeholder="Enter Pickup Location"
                     autoComplete="shipping address-line1"
-                    className="mt-2 bg-gray-300 text-xsm"
+                    className="mt-2 bg-gray-300 text-xsm max-lg:w-full"
                   />
                 </AddressAutofill>
               </div>
-              <div className="flex items-center">
+              <div className="flex max-lg:hidden items-center">
                 <IoNavigateCircle size={30} className="items-center mt-6 ml-2 flex justify-center" />
               </div>
               <div className="p-3">
